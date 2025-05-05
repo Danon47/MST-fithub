@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FitHub</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const header = document.querySelector('header');
+          const observerTarget = document.createElement('div');
+          observerTarget.setAttribute('data-observer-intercept', '');
+          document.body.prepend(observerTarget);
+      
+          const observer = new IntersectionObserver(([entry]) => {
+            header.classList.toggle('scrolled', !entry.isIntersecting);
+          });
+      
+          observer.observe(observerTarget);
+        });
+      </script>
+</head>
+<body>
+    <div class="container">
+        <header class="flex">
+            <img class="logo-header" src="/pics/ChatGPT Image 2 мая 2025 г., 21_23_18.png" alt="">
+            <nav class="nav-top">
+                <a href="#">Home</a>
+                <a href="#">Workouts</a>
+                <a href="#">Trainers</a>
+                <a href="#">Pricing</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+        <div class="hero">
+            <div>
+                <h1>Train Smarter. Get Stronger.</h1>
+                <p>Personalized workouts, expert trainers, and real results — wherever you are.</p>
+                <ul>
+                    <li>500+ Workout Programs</li>
+                    <li>Yoga, HIIT, Strength & More</li>
+                    <li>Mobile & Desktop Access</li>
+                </ul>
+                <button>Start Free Trial</button>
+            </div>
+        </div>
+        <div class="section1 flex">
+            <img src="/pics/mid1.svg" alt="mid1">
+            <div>
+                <ul>
+                    <li>🏋️ Custom Workout Plans</li>
+                    <li>📈 Track Your Progress</li>
+                    <li>🎯 Set and Reach Your Goals</li>
+                    <li>👨‍🏫 Support from Real Trainers</li>
+                </ul>
+                <button>Browse Workouts</button>
+            </div>
+            <img src="/pics/mid2.svg" alt="mid2">
+        </div>
+        <div class="section2 flex">
+            <form action="" method="post">
+                <h2>
+                    Join FitHub Today
+                </h2>
+                <input type="text" name="Name" required id="" placeholder="Name">
+                <input type="email" name="E-mail" required id="" placeholder="E-mail">
+                <label for="">
+                    <input type="checkbox" name="accept" required id="">
+                    I agree to receive updates and promotions
+                </label>
+                <button type="submit">Get Started</button>
+            </form>
+            <img src="/pics/join.svg" alt="join">
+        </div>
+        <footer>
+            <div>
+                <nav class="flex">
+                    <a href="">Back to top</a>
+                </nav>
+            </div>
+            <div class="footer-wrapper-top flex">
+                <div >
+                    <img class="logo-footer" src="/pics/ChatGPT Image 2 мая 2025 г., 21_23_18.png" alt="">
+                </div>
+                <div class="footer-links">
+                    <a href="#"><img src="/pics/insta.svg" alt="instagram"></a>
+                    <a href="#"><img src="/pics/tiktok.svg" alt="tiktok"></a>
+                    <a href="#"><img src="/pics/linkedin.svg" alt="linkedin"></a>
+                    <a href="#"><img src="/pics/facebook.svg" alt="facebook"></a>
+                    <a href="#"><img src="/pics/tg.svg" alt="telegram"></a>
+                    <a href="#"><img src="/pics/yt.svg" alt="youtube"></a>
+                </div>
+                <div>
+                    <button>Contact Us</button>
+                </div>
+            </div>
+            <div class="footer-wrapper-bottom flex">
+                <a href="#">© 2024, Copyright.</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
